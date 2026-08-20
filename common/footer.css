@@ -1,0 +1,215 @@
+.crf-footer {
+  background-color: #04121a; /* Dark blue matching the reference image */
+  color: #fff;
+  font-family: 'Open Sans', 'Montserrat', sans-serif;
+  padding: 25px 0 15px 0;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
+}
+
+.crf-footer p {
+  margin: 0 0 5px 0;
+  line-height: 1.5;
+  color: #ffffff !important;
+}
+
+.crf-footer-mt-15 {
+  margin-top: 15px !important;
+}
+
+.crf-footer a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.crf-footer a:hover {
+  text-decoration: underline;
+  color: #ffffff !important;
+}
+
+.crf-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.crf-footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.crf-footer-column.logo-column {
+  flex: 0 0 280px;
+}
+
+.crf-footer-logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.crf-footer-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff !important;
+}
+
+.crf-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.crf-social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.crf-social-icons a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.crf-social-icons svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+/* Colorful Brand Icons */
+.crf-social-icons a[aria-label="Facebook"] {
+  background-color: #1877f2;
+}
+.crf-social-icons a[aria-label="Facebook"]:hover {
+  background-color: #166fe5;
+}
+
+.crf-social-icons a[aria-label="X"] {
+  background-color: #000000;
+}
+.crf-social-icons a[aria-label="X"]:hover {
+  background-color: #333333;
+}
+
+.crf-social-icons a[aria-label="Instagram"] {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.crf-social-icons a[aria-label="Instagram"]:hover {
+  filter: brightness(1.1);
+}
+
+.crf-social-icons a[aria-label="LinkedIn"] {
+  background-color: #0a66c2;
+}
+.crf-social-icons a[aria-label="LinkedIn"]:hover {
+  background-color: #084e96;
+}
+
+.crf-social-icons a[aria-label="YouTube"] {
+  background-color: #ff0000;
+}
+.crf-social-icons a[aria-label="YouTube"]:hover {
+  background-color: #cc0000;
+}
+
+.crf-footer-bottom {
+  max-width: 1400px;
+  margin: 20px auto 0;
+  padding: 15px 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center !important;
+  font-size: 13px;
+}
+
+.crf-footer-bottom p {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.crf-footer-bottom a {
+  color: #1a9ebd;
+  text-decoration: none;
+}
+
+.crf-footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .crf-footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+  }
+
+  .crf-footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .crf-footer-column {
+    min-width: unset;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .crf-footer-column.logo-column {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .crf-footer-logo {
+    max-width: 260px;
+    width: 85%;
+    margin-bottom: 5px;
+  }
+
+  .crf-footer p {
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .crf-footer-mt-15 {
+    margin-top: 8px !important;
+  }
+
+  .crf-footer-title {
+    font-size: 16px;
+    margin-bottom: 8px !important;
+  }
+
+  .crf-social-icons {
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .crf-social-icons a {
+    width: 38px; /* Slightly larger for better touch target */
+    height: 38px;
+  }
+
+  .crf-social-icons svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .crf-footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 12px;
+  }
+}

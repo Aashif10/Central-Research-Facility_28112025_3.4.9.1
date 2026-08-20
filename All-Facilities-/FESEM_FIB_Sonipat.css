@@ -1,0 +1,167 @@
+/* Basic styling for the FESEM page */
+.u-section-1 {
+  padding: 20px 0 50px;
+  background-color: #eaf6fc;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: auto;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: left;
+  margin: 0 0 30px;
+  color: #111111;
+  line-height: 1.2;
+}
+
+.u-section-1 .u-image-1 {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-top: 17px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.u-text-wrapper {
+  max-width: 100%;
+  margin: 0;
+}
+
+.description-list {
+  padding-left: 20px;
+  color: #111111;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.description-list li {
+  margin-bottom: 0px;
+}
+
+.instrument-specs {
+  width: 100%;
+  font-size: 1rem;
+  color: #111111;
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .u-section-1 .u-sheet-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .u-section-1 .u-text-1 {
+    width: 100%;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 350px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .u-text-wrapper {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
+
+.equipment-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: left;
+  margin: 40px 0 20px;
+  color: #111111;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.equipment-list {
+  padding-left: 20px;
+  color: #111111;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.equipment-list li {
+  margin-bottom: 5px;
+}
+
+.contact-section {
+  padding: 40px 0;
+  background-color: #eaf6fc;
+  text-align: center;
+}
+
+.testing-btn {
+  display: inline-block;
+  background-color: #0cbcf5;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.testing-btn:hover {
+  background-color: #397f91;
+  color: white;
+}
+
+.contact-heading {
+  font-size: 1.4rem !important;
+  font-weight: 700;
+  color: #005073;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  max-width: 1140px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.contact-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 15px;
+}
+
+.contact-column h3 {
+  font-size: 1rem !important;
+  font-weight: 700;
+  color: #005073;
+  margin-bottom: 15px;
+}
+
+.contact-column p {
+  font-size: 0.90rem;
+  color: #005073;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.contact-column strong {
+  font-weight: 700;
+}
+

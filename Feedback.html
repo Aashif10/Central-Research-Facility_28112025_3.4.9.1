@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html style="font-size: 15px;" lang="en-IN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Feedback | CRF IIT Delhi</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Feedback.css" media="screen">
+    <link rel="stylesheet" href="common/header.css" media="screen">
+    <link rel="stylesheet" href="common/footer.css" media="screen">
+    
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="common/header.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="common/footer.js" defer=""></script>
+</head>
+<body data-path-to-root="./" class="u-body u-clearfix u-xl-mode" data-lang="en">
+    <div id="common-header-container"></div>
+    
+    <main class="u-clearfix">
+        <div class="feedback-wrapper">
+            <!-- Left Panel: Context -->
+            <div class="feedback-info-panel">
+                <div class="header-group">
+                    <div class="info-icon">💬</div>
+                    <h1>Share Your Feedback</h1>
+                </div>
+                <img src="images/ShadowCRFWhite.png" alt="CRF Logo" class="panel-logo" style="width: 230px; margin: 10px auto 20px; opacity: 0.7; display: block;">
+                <p class="panel-description" style="color: #ffffff; opacity: 1; font-weight: 500;">We would appreciate hearing your thoughts, suggestions, concerns, or any issues you may have, as your feedback helps us continuously improve our services and overall experience.</p>
+                
+                <div class="step-indicator">
+                    <div class="step-dot active"></div>
+                    <div class="step-dot"></div>
+                    <div class="step-dot"></div>
+                    <span style="font-size: 0.8rem; font-weight: 600;">Verification Step</span>
+                </div>
+            </div>
+            
+            <!-- Right Panel: Form -->
+            <div class="feedback-form-panel">
+                <div class="form-header">
+                    <h2>Email Verification</h2>
+                    <p>Start by providing your registered email</p>
+                </div>
+
+                <form id="verificationForm">
+                    <div class="input-field-box">
+                        <label for="email">Registered Email</label>
+                        <input type="email" id="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="action-row">
+                        <button type="button" id="mainBtn" class="btn-main" onclick="handleAction()">Proceed to Feedback</button>
+                        <button type="button" class="btn-secondary-pill" onclick="resetForm()">Reset Form</button>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div class="footer-hint">
+                           * Email verification is mandatory to ensure user authenticity.<br>  * Please verify your email ID using the OTP first.<br>* Once verified, you will be able to submit your feedback.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <div id="common-footer-container"></div>
+
+    <script>
+        function handleAction() {
+            const email = document.getElementById('email').value;
+            
+            if(!email) {
+                alert('Please provide your email address.');
+                return;
+            }
+
+            alert('Searching for registration associated with ' + email + '...');
+            // Redirect logic would go here
+            // window.location.href = 'detailed-feedback-form.html';
+        }
+
+        function resetForm() {
+            document.getElementById('email').value = '';
+            document.getElementById('mainBtn').textContent = 'Proceed to Feedback';
+        }
+    </script>
+</body>
+</html>

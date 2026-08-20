@@ -1,0 +1,256 @@
+/* GCMS.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0cbcf5;
+    --secondary-color: #054a71;
+    --bg-light: #e6f7f8;
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: #1a1a1a;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Section 1 ── */
+.u-section-1 {
+    background-color: var(--bg-light);
+    padding: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.u-section-1 .u-sheet-1 {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px 20px 20px;
+}
+
+/* ── Title ── */
+.u-section-1 .u-text-1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-align: left;
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+}
+
+/* ── Image (stacked, left-aligned) ── */
+.u-section-1 .u-image-1 {
+    display: block;
+    width: auto;
+    max-width: 360px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    margin: 0 0 30px 0;
+    transition: transform 0.3s ease;
+}
+
+.u-section-1 .u-image-1:hover {
+    transform: scale(1.02);
+}
+
+/* Info card below image */
+.u-model-info {
+    max-width: 360px;
+    margin: 10px 0 24px 0;
+    padding: 12px 16px;
+    background-color: #f9ffff;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.u-model-info p {
+    margin: 0 0 6px 0;
+    font-size: 0.93rem;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.u-model-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Description block ── */
+.u-desc-block {
+    width: 100%;
+}
+
+/* "Brief Description..." heading */
+.u-section-1 .u-text-2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #005073;
+    margin: 0 0 12px 0;
+    text-align: left;
+}
+
+/* Brief text paragraph */
+.u-brief-text {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    line-height: 1.7;
+    margin: 0 0 28px 0;
+    text-align: justify;
+}
+
+/* SPECIFICATION: heading */
+.u-section-1 .u-text-3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+/* ── Specification list ── */
+.u-spec-list {
+    list-style: none;
+    margin: 0 0 28px 0;
+    padding: 0;
+}
+
+.u-spec-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.78);
+    border-radius: 6px;
+    font-size: 0.97rem;
+    color: #054a71;
+    line-height: 1.6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.u-spec-list li:hover {
+    background-color: rgba(12, 188, 245, 0.07);
+}
+
+.spec-bullet {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.u-spec-list li strong {
+    color: #005073;
+    font-weight: 700;
+}
+
+/* ── Contact Section ── */
+.contact-section {
+    padding: 30px 20px;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.testing-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(12, 188, 245, 0.3);
+}
+
+.testing-btn:hover {
+    background-color: #0098cc;
+    color: #ffffff;
+}
+
+.contact-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #005073;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align columns at the top */
+    text-align: left;
+    max-width: 1140px;
+    margin: 0 auto;
+    gap: 30px; /* Increased gap for better separation */
+}
+
+.contact-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-column h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #005073;
+    margin-bottom: 15px;
+    min-height: 3.2em; /* Height for exactly 2 lines of text */
+    display: flex;
+    align-items: flex-start; /* Headers start at the same top line */
+    border-bottom: 1px solid rgba(12, 188, 245, 0.2);
+    padding-bottom: 10px;
+    line-height: 1.4;
+}
+
+.contact-column p {
+    font-size: 0.90rem;
+    color: #005073;
+    line-height: 1.7;
+    margin-top: 0; /* Align first line of content */
+    margin-bottom: 5px;
+}
+
+.contact-column strong {
+    font-weight: 700;
+}
+
+/* ── Animation ── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+    .u-section-1 .u-text-1 {
+        font-size: 1.4rem;
+    }
+
+    .u-section-1 .u-image-1 {
+        max-width: 100%;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-column {
+        padding: 0;
+    }
+}

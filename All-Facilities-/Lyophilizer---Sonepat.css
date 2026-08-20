@@ -1,0 +1,167 @@
+/* Global Typography Standardized for CRF */
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif !important;
+  color: #000000 !important;
+}
+
+.u-section-1 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: auto !important;
+  padding-bottom: 40px !important;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700 !important;
+  font-size: 1.875rem;
+  margin: 21px 0 30px;
+  text-align: center;
+  color: #000000 !important;
+}
+
+/* Layout: Image centered, text below */
+
+.u-section-1 .u-image-1 {
+  width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 0 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.u-section-1 .u-image-1:hover {
+  transform: scale(1.02);
+}
+
+.u-section-1 .u-text-2 {
+  margin: 0 0 20px;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000 !important;
+}
+
+.u-section-1 .u-text-3 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000 !important;
+  padding-left: 20px;
+}
+
+.u-section-1 .u-text-3 li {
+  margin-bottom: 10px;
+}
+
+.u-section-1 .u-btn-1 {
+  background-color: #2385cb !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 36px auto 0 !important;
+  display: block;
+  width: fit-content;
+  padding: 14px 40px !important;
+  border-radius: 50px !important;
+  border: none !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 10px rgba(35, 133, 203, 0.3);
+}
+
+.u-section-1 .u-btn-1:hover {
+  background-color: #1a6399 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(35, 133, 203, 0.4);
+}
+
+.u-section-2 {
+  background-color: #f2f2f2 !important;
+  color: #000000 !important;
+  padding: 20px 0 24px !important;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: auto !important;
+}
+
+.u-section-2 .u-text-1 {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700;
+  margin: 0 0 16px !important;
+  font-size: 1.8rem !important;
+  text-align: center !important;
+  color: #192841 !important;
+  /* Override Nicepage .u-text-default (fit-content + flex-start) so the heading centers in the sheet */
+  display: block !important;
+  width: 100% !important;
+  align-self: stretch !important;
+}
+
+.u-section-2 .u-layout-wrap-1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-2 .u-layout-cell {
+  background-color: transparent !important;
+}
+
+.u-section-2 .u-container-layout {
+  padding: 8px 20px 12px;
+}
+
+.u-section-2 .u-text-header {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #192841 !important;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.u-section-2 .u-text-body {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #192841 !important;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-image-1 {
+    width: 300px;
+  }
+
+  .u-section-2 .u-container-layout {
+    padding: 8px 10px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .u-section-2 .u-size-20 {
+    width: 100% !important;
+  }
+}

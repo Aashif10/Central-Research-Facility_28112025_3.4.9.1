@@ -1,0 +1,399 @@
+/* PPMS---Delhi.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0cbcf5;
+    --secondary-color: #054a71;
+    --accent-color: #ff6b6b;
+    --text-dark: #1a1a1a;
+    --text-light: #f4f4f4;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.u-sheet {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px 20px 40px; /* Zero top padding */
+}
+
+/* Section 1: Intro */
+.u-section-1 {
+    background-color: #f0faff;
+    padding: 0; /* Zero padding to move title up */
+}
+
+section.u-section-1 .u-text-1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-top: 0; /* No top margin */
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.2;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
+}
+
+.facility-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.u-image-1 {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin-top: 15px; /* Added top margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.u-image-1:hover {
+    transform: scale(1.02);
+}
+
+.description-box {
+    padding: 0;
+    width: 100%;
+}
+
+section.u-section-1 .u-text-2 {
+    font-size: 1.1rem !important; /* Increased size with higher priority */
+    text-align: justify;
+    color: #054a71;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.meta-info {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
+
+.meta-info p {
+    margin: 5px 0;
+}
+
+/* Section 2: DynaCool Cryostat */
+.u-section-2 {
+    padding: 40px 0;
+    background-color: white;
+}
+
+.u-text-3, .u-text-4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #054a71;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.u-section-3 {
+    padding: 40px 0;
+    background-color: #f8fbff;
+}
+
+/* 4-Image Flex Gallery */
+.ppms-gallery {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.ppms-gallery-item {
+    flex: 1 1 calc(50% - 8px) !important;
+    min-width: 260px !important;
+    max-width: calc(50% - 8px) !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
+    background-color: #eee !important;
+    position: relative !important;
+    display: block !important;
+}
+
+.ppms-gallery-item img {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover !important;
+    display: block !important;
+    position: relative !important;
+    max-width: 100% !important;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0.92;
+}
+
+.ppms-gallery-item:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Section 4: Graphs Gallery */
+.u-section-4 {
+    padding: 60px 0 !important;
+    background-color: #f2f7fa !important;
+}
+
+.graphs-gallery {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 50px 30px !important;
+    margin-top: 10px !important;
+    justify-content: center !important;
+}
+
+.graph-item {
+    flex: 1 1 calc(50% - 15px) !important;
+    min-width: 320px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: transparent !important;
+}
+
+.graph-title {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    line-height: 1.4 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    white-space: nowrap !important;
+}
+
+.graph-item img {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: block !important;
+}
+
+
+.spec-table-container {
+    width: 100%;
+    border: 1px solid #333;
+    margin-top: 30px;
+    background-color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.spec-main-header {
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+.spec-sub-header {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+.spec-flex-row {
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+
+.spec-flex-row:last-child {
+    border-bottom: none;
+}
+
+.spec-index {
+    width: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-right: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+.spec-data {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+
+.u-note-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff4e5;
+    border-left: 5px solid #ff9800;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #663c00;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.u-text-1, .facility-container, .u-section-2, .u-section-3 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .u-text-1 {
+        font-size: 1.8rem;
+    }
+    
+    .meta-info {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .ppms-gallery-item {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ppms-gallery-item img {
+        height: 200px !important;
+    }
+
+    .graph-item {
+        flex: 1 1 100%;
+    }
+
+    .contact-card {
+        flex: 1 1 100% !important;
+        text-align: center;
+    }
+}
+
+/* Section 5: Contact Info */
+#sec-contact-info {
+    padding: 60px 0;
+    background-color: #f2f7fa;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testing-btn-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testing-charges-btn {
+    display: inline-block;
+    background-color: #00b4eb;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 180, 235, 0.3);
+}
+
+.testing-charges-btn:hover {
+    background-color: #0098cc;
+}
+
+.contact-heading {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    flex: 1 1 calc(33.333% - 40px);
+    min-width: 250px;
+    background: transparent;
+}
+
+.contact-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 15px;
+    min-height: 48px;
+}
+
+.contact-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #155e75;
+}
+
+.contact-text strong {
+    color: #0b5a75;
+    font-weight: 700;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRF IIT Delhi – Facility Usage Report</title>
+  <meta name="description" content="Central Research Facility IIT Delhi – Facility-wise graphical usage and revenue report" />
+  <link rel="icon" href="images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+   <link rel="stylesheet" href="nicepage.css" media="screen">
+   <link rel="stylesheet" href="report.css" />
+   <link rel="stylesheet" href="common/header.css" />
+   <link rel="stylesheet" href="common/footer.css" />
+   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+   <script src="common/header.js" defer></script>
+</head>
+<body>
+
+<!-- ═══════════════ COMMON HEADER ═══════════════ -->
+<div id="common-header-container"></div>
+
+
+<!-- ═══════════════ FILTER BAR ═══════════════ -->
+<nav class="filter-bar">
+  <span class="filter-label">Filter by User Category:</span>
+  <button class="filter-btn active" data-filter="all" id="filter-all">All Categories</button>
+  <button class="filter-btn" data-filter="IITD Internal" id="filter-internal">IITD Internal</button>
+  <button class="filter-btn" data-filter="External Student / Faculty" id="filter-external">External Student/Faculty</button>
+  <button class="filter-btn" data-filter="Industrial" id="filter-industrial">Industrial</button>
+  <button class="filter-btn" data-filter="R&D Institute" id="filter-rd">R&amp;D Institute</button>
+  <a href="files/CRF_Annual_report2025-1.pdf" target="_blank" class="download-rpt-btn" title="Download Annual Report PDF">
+    <span>⬇</span> Download Report (PDF)
+  </a>
+</nav>
+
+<!-- ═══════════════ KPI CARDS ═══════════════ -->
+<section class="kpi-section">
+  <div class="kpi-grid">
+    <div class="kpi-card kpi-blue">
+      <div class="kpi-icon">🔬</div>
+      <div class="kpi-value" id="kpi-samples">0</div>
+      <div class="kpi-label">Total Samples</div>
+    </div>
+    <div class="kpi-card kpi-teal">
+      <div class="kpi-icon">📅</div>
+      <div class="kpi-value" id="kpi-appts">0</div>
+      <div class="kpi-label">Total Appointments</div>
+    </div>
+    <div class="kpi-card kpi-green">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-value" id="kpi-revenue">₹0</div>
+      <div class="kpi-label">Total Revenue</div>
+    </div>
+    <div class="kpi-card kpi-orange">
+      <div class="kpi-icon">🏭</div>
+      <div class="kpi-value" id="kpi-facilities">19</div>
+      <div class="kpi-label">Facilities</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ROW 1: PIE + REVENUE BY CATEGORY ═══════════════ -->
+<section class="charts-section">
+  <div class="charts-row">
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <h2>Sample Distribution by User Category</h2>
+        <span class="badge badge-primary">Donut Chart</span>
+      </div>
+      <div class="chart-wrap chart-wrap-sm">
+        <canvas id="chartSamplePie"></canvas>
+      </div>
+      <div class="chart-legend" id="pieLegend"></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <h2>Revenue by User Category</h2>
+        <span class="badge badge-green">Bar Chart</span>
+      </div>
+      <div class="chart-wrap chart-wrap-sm">
+        <canvas id="chartRevenueCat"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ ROW 2: INTERNAL vs EXTERNAL ═══════════════ -->
+<section class="charts-section">
+  <div class="charts-row">
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <h2>Internal vs External – Samples</h2>
+        <span class="badge badge-teal">Comparison</span>
+      </div>
+      <div class="chart-wrap chart-wrap-sm">
+        <canvas id="chartIntExtSamples"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <h2>Internal vs External – Revenue</h2>
+        <span class="badge badge-orange">Revenue Split</span>
+      </div>
+      <div class="chart-wrap chart-wrap-sm">
+        <canvas id="chartIntExtRevenue"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ ROW 3: TOP FACILITIES BY SAMPLES ═══════════════ -->
+<section class="charts-section">
+  <div class="charts-row single">
+    <div class="chart-card full">
+      <div class="chart-header">
+        <h2>Top Facilities by Number of Samples</h2>
+        <span class="badge badge-primary">Horizontal Bar</span>
+      </div>
+      <div class="chart-wrap chart-wrap-tall">
+        <canvas id="chartTopFacilitiesSamples"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ROW 4: TOP FACILITIES BY REVENUE ═══════════════ -->
+<section class="charts-section">
+  <div class="charts-row single">
+    <div class="chart-card full">
+      <div class="chart-header">
+        <h2>Top Facilities by Revenue Generated</h2>
+        <span class="badge badge-green">Revenue Ranking</span>
+      </div>
+      <div class="chart-wrap chart-wrap-tall">
+        <canvas id="chartTopFacilitiesRevenue"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ROW 5: SLOTS OPENED vs SLOTS BOOKED ═══════════════ -->
+<section class="charts-section">
+  <div class="charts-row single">
+    <div class="chart-card full">
+      <div class="chart-header">
+        <h2>Slots Opened vs Slots Booked – Facility Wise</h2>
+        <span class="badge badge-teal">Grouped Bar</span>
+      </div>
+      <div class="chart-wrap chart-wrap-tall">
+        <canvas id="chartSlotsOpenedBooked"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ ROW 8: REVENUE – INTERNAL vs EXTERNAL per FACILITY ═══════════════ -->
+<section class="charts-section">
+  <div class="charts-row single">
+    <div class="chart-card full">
+      <div class="chart-header">
+        <h2>Revenue Comparison: Internal vs External – Per Facility</h2>
+        <span class="badge badge-green">Revenue</span>
+      </div>
+      <div class="chart-wrap chart-wrap-tall">
+        <canvas id="chartRevenueFacilityGroup"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DATA TABLE ═══════════════ -->
+<section class="table-section">
+  <div class="table-card">
+    <div class="chart-header">
+      <h2>Detailed Instrument-wise Data</h2>
+      <div class="table-controls">
+        <input type="text" id="tableSearch" placeholder="Search instrument…" class="table-search" />
+        <span class="badge badge-primary" id="rowCount"></span>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Facility</th>
+            <th>User Category</th>
+            <th>Samples</th>
+            <th>Appointments</th>
+            <th>Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <div id="pagination" class="pagination-container"></div>
+  </div>
+</section>
+
+<!-- ═══════════════ COMMON FOOTER ═══════════════ -->
+<div id="common-footer-container"></div>
+<script src="common/footer.js" defer></script>
+
+<script src="report.js"></script>
+</body>
+</html>

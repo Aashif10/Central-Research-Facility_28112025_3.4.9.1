@@ -1,0 +1,140 @@
+ .u-section-1 {
+  min-height: 380px;
+}
+
+.u-section-1 .u-gallery-1 {
+  height: 380px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-carousel-indicators-1 {
+  position: absolute;
+  bottom: 10px;
+  width: auto;
+  height: auto;
+}
+
+.u-section-1 .u-carousel-item-1 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-item-2 {
+  margin-right: 0;
+}
+
+.u-section-1 .u-over-slide-2 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+  padding: 30px;
+}
+
+.u-section-1 .u-carousel-control-1 {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.u-section-1 .u-carousel-control-2 {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-carousel-item-1 {
+    margin-right: initial;
+  }
+
+  .u-section-1 .u-carousel-item-2 {
+    margin-right: initial;
+  }
+} .u-section-2 {
+  background-image: linear-gradient(#808080, white);
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 228px;
+}
+
+.u-section-2 .u-text-1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin: 19px auto 0;
+}
+
+.u-section-2 .u-btn-1 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  background-image: none;
+  margin: 22px auto 0;
+}
+
+.u-section-2 .u-btn-2 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  background-image: none;
+  margin: 19px auto 21px;
+  padding: 10px 62px 10px 61px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 255px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 3.75rem;
+  }
+
+  .u-section-2 .u-btn-2 {
+    padding-right: 76px;
+    padding-left: 75px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-section-2 .u-btn-1 {
+    letter-spacing: 1px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 9px 13px 11px 11px;
+  }
+
+  .u-section-2 .u-btn-2 {
+    font-size: 1rem;
+    margin-top: 29px;
+    margin-bottom: 19px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+} .u-section-3 {
+  background-image: linear-gradient(white, #e6f8fe);
+}
+
+.u-section-3 .u-sheet-1 {
+  min-height: 2229px;
+}
+
+.u-section-3 .u-custom-html-1 {
+  margin-bottom: 0;
+  height: auto;
+  min-height: 2230px;
+  margin-top: 0;
+}
